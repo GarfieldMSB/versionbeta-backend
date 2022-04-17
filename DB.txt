@@ -1,0 +1,30 @@
+CREATE TABLE usuario (
+	rut varchar(9) NOT NULL PRIMARY KEY(rut),
+	nombre varchar(20) NOT NULL,
+	apellido1 varchar(20) NOT NULL,
+	apellido2 varchar(20),
+	correo	varchar(20) NOT NULL,
+	celular varchar(20),
+	contraseña varchar(20) NOT NULL,
+	id_empresa_interna varchar(20) ,
+	id_area varchar(20),
+	id_tipo_usuario varchar(20)
+);
+
+CREATE TABLE usuario (
+	rut varchar(9),
+	name varchar(20) NOT NULL,
+	lastname1 varchar(20) NOT NULL,
+	lastname2 varchar(20),
+	email varchar(20) NOT NULL,
+	password varchar(20) NOT NULL,
+	PRIMARY KEY(rut)
+);
+
+ALTER TABLE usuario ADD PRIMARY KEY(rut);
+
+INSERT INTO usuario (rut, name, lastname1, email, password) VALUES ('1-9', 'Matias', 'Sepúlveda', 'matias@gmail.com', '123456');
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'Matroxse1';
+
